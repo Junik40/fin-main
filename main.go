@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"time"
 
+	
 	_ "modernc.org/sqlite"
 )
 
@@ -40,7 +41,7 @@ func (s ParcelService) Register(client int, address string) (Parcel, error) {
 
 	id, err := s.store.Add(parcel)
 	if err != nil {
-		return parcel, err
+		return parcel,  err
 	}
 
 	parcel.Number = id
